@@ -1,0 +1,40 @@
+{
+  "description": "Remove the jump from 5ch.net. Just install this addon.",
+  "manifest_version": 2,
+  "name": "unjump5ch",
+  "version": "1.0.0",
+  "icons": {
+    "64": "icon/j-black.svg"
+  },
+  "browser_action": {
+    "default_icon": {
+      "64": "icon/j-black.svg"
+    },
+    "default_title": "unjump5ch",
+    "theme_icons": [
+      {
+        "light": "icon/j-white.png",
+        "dark": "icon/j-black.png",
+        "size": 64
+      }
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.5ch.net/*"
+      ],
+      "js": [
+        "js/content.js"
+      ],
+      "run_at": "document_end",
+      "all_frames": false
+    }
+  ],
+  "applications": {
+    "gecko": {
+      "id": "unjump5ch@snca.net",
+      "strict_min_version": "57.0"
+    }
+  }
+}
