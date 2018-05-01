@@ -58,7 +58,7 @@ npm run build
 # Git {{{
 
 git commit -m 'version++' "$MANIFEST" "$PACKAGE"
-git archive --format=zip HEAD >| copyf.src.zip
+git archive --format=zip HEAD >| unjump5ch.src.zip
 git tag "v$next_version"
 git push --tags
 
