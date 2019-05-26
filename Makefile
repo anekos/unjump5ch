@@ -8,6 +8,9 @@ export PATH := node_modules/.bin:$(PATH)
 build:
 	npm run build
 
+watch:
+	npm run watch
+
 release:
 	./script/release
 
