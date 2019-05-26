@@ -5,9 +5,6 @@ export PATH := node_modules/.bin:$(PATH)
 
 .PHONY: dist
 
-watch:
-	npm run watch
-
 build:
 	npm run build
 

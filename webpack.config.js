@@ -13,7 +13,11 @@ const app = {
     filename: 'js/[name].js'
   },
   plugins: [
-    new CleanWebpackPlugin(['dist']),
+    new CleanWebpackPlugin({
+      output: {
+        path: `${__dirname}/dist/`,
+      }
+    }),
     new CopyWebpackPlugin([
       {from: 'src/icon/*.svg', to: 'icon/[name].[ext]'},
       {from: 'src/meta/manifest.json'},
