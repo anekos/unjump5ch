@@ -19,3 +19,10 @@ sign:
 
 install:
 	npm install
+
+check-updates:
+	ncu
+
+update-modules:
+	ncu -u
+	npm update
