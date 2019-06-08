@@ -1,4 +1,4 @@
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ZipPlugin = require('zip-webpack-plugin');
 
@@ -13,11 +13,7 @@ const app = {
     filename: 'js/[name].js'
   },
   plugins: [
-    new CleanWebpackPlugin({
-      output: {
-        path: `${__dirname}/dist/`,
-      }
-    }),
+    new CleanWebpackPlugin({}),
     new CopyWebpackPlugin([
       {from: 'src/icon/*.svg', to: 'icon/[name].[ext]'},
       {from: 'src/meta/manifest.json'},
