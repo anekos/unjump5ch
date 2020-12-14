@@ -2,7 +2,7 @@
   "description": "Remove the jump from 5ch.net. Just install this addon.",
   "manifest_version": 2,
   "name": "unjump5ch",
-  "version": "1.0.8",
+  "version": "1.0.10",
   "icons": {
     "64": "icon/j-black.svg"
   },
