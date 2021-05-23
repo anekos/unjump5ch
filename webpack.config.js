@@ -14,10 +14,12 @@ const app = {
   },
   plugins: [
     new CleanWebpackPlugin({}),
-    new CopyWebpackPlugin([
-      {from: 'src/icon/*.svg', to: 'icon/[name].[ext]'},
-      {from: 'src/meta/manifest.json'},
-    ], {}),
+    new CopyWebpackPlugin({
+      patterns: [
+        {from: 'src/icon/*.svg', to: 'icon/[name].[ext]'},
+        {from: 'src/meta/manifest.json'},
+      ]
+    }),
     new ZipPlugin({
       filename: '../unjump5ch.zip'
     }),
