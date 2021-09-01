@@ -16,7 +16,7 @@ const app = {
     new CleanWebpackPlugin({}),
     new CopyWebpackPlugin({
       patterns: [
-        {from: 'src/icon/*.svg', to: 'icon/[name][ext]'},
+        {from: 'src/icon/*.svg', to: 'icon/[name].[ext]'},
         {from: 'src/meta/manifest.json'},
       ]
     }),
